@@ -5,7 +5,7 @@ from time import sleep
 
 driver = webdriver.Chrome(data.chrome)
 driver.maximize_window()
-driver.get(data.devilUrlIn)
+driver.get(data.Url)
 
 # 需安装VCForPython27
 # F:\JAVA\jre1.8\jre\bin\server\jvm.dll

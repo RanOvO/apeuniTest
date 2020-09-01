@@ -7,7 +7,7 @@ import data
 
 driver = webdriver.Chrome(data.chrome)
 driver.maximize_window()
-driver.get(data.devilUrlIn)
+driver.get(data.Url)
 
 login(driver)#登陆
 sleep(3)

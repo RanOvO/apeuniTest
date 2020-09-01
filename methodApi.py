@@ -8,11 +8,11 @@ def login(driver):
     java.lang.System.out.println("hello world")
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
-    screen.type(r"img\admin.png", "apeuni")
-    sleep(1)
-    screen.type(r"img\pass.png", "apeSandbox")
-    sleep(1)
-    screen.click(r"img\3.png")
+    # screen.type(r"img\admin.png",data.deviluser)
+    # sleep(1)
+    # screen.type(r"img\pass.png",data.devilpsw)
+    # sleep(1)
+    # screen.click(r"img\3.png")
 
     # shutdownJVM()
     ele = driver.find_element_by_id('user_email')
@@ -52,9 +52,9 @@ def score(driver,type):
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
     if type == 1:
-        ele = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[9]/div[1]/button[1]')  # 提交
+        ele = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[8]/div[1]/button[1]')  # 提交
     elif type == 2:
-        ele = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[9]/div[1]/button[1]')  # 提交
+        ele = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[8]/div[1]/button[1]')  # 提交
     ele.click()
     sleep(3)
     screen.click(r"img\pingfen.png")  # 点击评分
