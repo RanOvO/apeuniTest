@@ -3,6 +3,7 @@ from jpype import *
 from time import sleep
 from methodApi import login
 from methodApi import speak
+from methodApi import allow,score
 import data
 
 driver = webdriver.Chrome(data.chrome)
@@ -15,7 +16,8 @@ ele=driver.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/div[2]/div/di
 ele.click()
 sleep(1)
 driver.get(data.asq)#进入题目
-speak(driver,2,30)#1是手点，2是自动录音&评分
-# score(driver,1,1)#手动点击录音&评分
+allow() #允许录音
+speak(driver,1,30)#1是手点，2是自动录音&评分
+# score(driver,1)#手动点击录音&评分
 shutdownJVM()
 pass

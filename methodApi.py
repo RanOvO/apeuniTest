@@ -6,8 +6,8 @@ def login(driver):
     getDefaultJVMPath()
     startJVM(getDefaultJVMPath(), "-ea", r"-Djava.class.path=sikuli\sikulixapi.jar")
     java.lang.System.out.println("hello world")
-    Screen = JClass("org.sikuli.script.Screen")
-    screen = Screen()
+    # Screen = JClass("org.sikuli.script.Screen")
+    # screen = Screen()
     # screen.type(r"img\admin.png",data.deviluser)
     # sleep(1)
     # screen.type(r"img\pass.png",data.devilpsw)
@@ -27,18 +27,21 @@ def login(driver):
 
 def redio(driver):
     #DI://*[@id="root"]/div[2]/div[4]/div/div[5]/div[2]/div[3]/div/i
-    ele=driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[5]/div[2]/div[3]/div/i')# 开始录音
+    ele=driver.find_element_by_xpath(data.startR)# 开始录音
     ele.click()
     sleep(5)
-    ele=driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[5]/div[2]/div[3]/div/i')# 结束录音
+    ele=driver.find_element_by_xpath(data.endR)# 结束录音
     ele.click()
     sleep(1)
     return
 
-def speak(driver,selecte,s):
+def allow():
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
     screen.click(r"img\red.png")  # 点击允许录音
+    return
+
+def speak(driver,selecte,s):
     sleep(2)
     if selecte == 1:  # 手点
         redio(driver)
@@ -52,12 +55,14 @@ def score(driver,type):
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
     if type == 1:
-        ele = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[8]/div[1]/button[1]')  # 提交
+        ele = driver.find_element_by_xpath(data.submit)  # 提交
     elif type == 2:
-        ele = driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[8]/div[1]/button[1]')  # 提交
+        ele = driver.find_element_by_xpath(data.submit)  # 提交
     ele.click()
     sleep(3)
-    screen.click(r"img\pingfen.png")  # 点击评分
+    screen.click(r"img\pingfen.png")# 点击评分
+    sleep(10)
+    # screen.click(r"img\us.png")  
     if type == 2:
         sleep(1)
         ele=driver.find_element_by_xpath('/html/body/div[3]/div/div/ul/li[1]')
