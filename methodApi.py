@@ -55,18 +55,31 @@ def score(driver,type):
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
     if type == 1:
-        ele = driver.find_element_by_xpath(data.submit)  # 提交
+        ele = driver.find_element_by_css_selector(data.submit)  # 提交
     elif type == 2:
-        ele = driver.find_element_by_xpath(data.submit)  # 提交
+        # ele = driver.find_element_by_xpath(data.submit)  # 提交
+        ele=driver.find_element_by_css_selector(data.submit)
     ele.click()
     sleep(3)
     screen.click(r"img\pingfen.png")# 点击评分
-    sleep(10)
+    sleep(15)
+    screen.click(r"img\close.png")# 关闭评分框
     # screen.click(r"img\us.png")  
+    if type == 1:
+        screen.click(r"img\delete.png")# 删除
+        sleep(1)
+        ele = driver.find_element_by_xpath(data.delete)
+        ele.click()
+        sleep(1)
     if type == 2:
         sleep(1)
         ele=driver.find_element_by_xpath('/html/body/div[3]/div/div/ul/li[1]')
         ele.click()
     return
+
+# def modal(driver):
+#     text = (driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div/div[4]/div')).text()
+#     a.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")  # 断言评分成功弹窗出现
+# return
 
 pass

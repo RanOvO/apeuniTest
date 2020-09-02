@@ -15,6 +15,8 @@ ele=driver.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/div[2]/div/di
 ele.click()
 sleep(1)
 driver.get(data.swt)#进入题目
+js='var q=document.documentElement.scrollTop=100000'
+driver.execute_script(js)
 sleep(2)
 # target = driver.find_element_by_xpath( '//*[@id="root"]/div[2]/div[4]/div/div[2]/div[2]/div/button')
 # driver.execute_script("arguments[0].scrollIntoView();", target)  # 往下滑动
