@@ -25,7 +25,7 @@ def login(driver):
     ele.click()
     return
 
-  def redio(driver):
+def redio(driver):
     #DI://*[@id="root"]/div[2]/div[4]/div/div[5]/div[2]/div[3]/div/i
     ele=driver.find_element_by_xpath(data.startR)# 开始录音
     ele.click()
