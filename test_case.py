@@ -30,8 +30,6 @@ if __name__ == "__main__":
     unittest.main()
 
 
-
-
 # (driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div/div[2]/div[3]/div/div[1]/button')).click()  # 关闭评分弹窗
 
 # (driver.find_element_by_xpath('//*[@id="root"]/div[2]/div[4]/div/div[10]/div[1]/button[2]')).click()  # 点击重做
