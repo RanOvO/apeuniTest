@@ -9,12 +9,6 @@ import data
 
 def Test_RS(Browser,Url,Qtype):
 
-    driver = webdriver.Chrome(Browser)
-    driver.maximize_window()
-    driver.get(Url)
-
-    login(driver)#登陆
-    sleep(3)
     ele=driver.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')#选择语言
     ele.click()
     sleep(1)

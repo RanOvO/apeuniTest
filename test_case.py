@@ -1,9 +1,21 @@
 import unittest
 import RA, RS, DI, RL, ASQ
 import data
+from selenium import webdriver
 
 
 class Test_Speaking(unittest.TestCase):
+
+    def setUp(self):
+
+        driver = webdriver.Chrome(data.chrome)
+        driver.maximize_window()
+        driver.get(data.Url)
+        login(driver)
+        slepp(3)
+
+    def tearDown(self):
+        webdriver.Chrome.quit()
 
     def test_Case_RA(self):
         text = RA.Test_RA(data.chrome, data.Url, data.ra)

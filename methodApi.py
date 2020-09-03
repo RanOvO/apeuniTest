@@ -78,13 +78,15 @@ def score(driver,type):
     if type ==1 or type ==2:
         screen.click(r"img\pingfen.png")# 点击评分
         sleep(15)
-        screen.click(r"img\close.png")# 关闭评分框
-    if type == 1:
-        screen.click(r"img\delete.png")# 删除
-        sleep(1)
-        ele = driver.find_element_by_xpath(data.delete)
-        ele.click()
-        sleep(1)
+    #     screen.click(r"img\close.png")# 关闭评分框
+
+    # if type == 1:
+    #     screen.click(r"img\delete.png")# 删除
+    #     sleep(1)
+    #     ele = driver.find_element_by_xpath(data.delete)
+    #     ele.click()
+    #     sleep(1)
+
     if type == 2:
         sleep(1)
         ele=driver.find_element_by_xpath('/html/body/div[3]/div/div/ul/li[1]')
