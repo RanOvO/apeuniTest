@@ -25,7 +25,7 @@ def login(driver):
     ele.click()
     return
 
-def redio(driver):
+  def redio(driver):
     #DI://*[@id="root"]/div[2]/div[4]/div/div[5]/div[2]/div[3]/div/i
     ele=driver.find_element_by_xpath(data.startR)# 开始录音
     ele.click()
@@ -91,9 +91,5 @@ def score(driver,type):
         ele.click()
     return
 
-# def modal(driver):
-#     text = (driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div/div[2]/div[2]/div/div/div[4]/div')).text()
-#     a.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")  # 断言评分成功弹窗出现
-# return
 
 pass
