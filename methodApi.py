@@ -25,7 +25,7 @@ def login(driver):
     ele.click()
     return
 
-def redio(driver):
+  def redio(driver):
     #DI://*[@id="root"]/div[2]/div[4]/div/div[5]/div[2]/div[3]/div/i
     ele=driver.find_element_by_xpath(data.startR)# 开始录音
     ele.click()
@@ -51,6 +51,11 @@ def speak(driver,selecte,s):
     score(driver,1)
     return
 
+def single(driver):
+    ele=driver.find_element_by_css_selector(data.singleAnswer)
+    ele.click()
+    return
+
 def score(driver,type):
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
@@ -61,10 +66,12 @@ def score(driver,type):
         ele=driver.find_element_by_css_selector(data.submit)
     ele.click()
     sleep(3)
-    screen.click(r"img\pingfen.png")# 点击评分
-    sleep(15)
-    screen.click(r"img\close.png")# 关闭评分框
-    # screen.click(r"img\us.png")  
+
+    #口语和写作
+    if type ==1 or type ==2:
+        screen.click(r"img\pingfen.png")# 点击评分
+        sleep(15)
+        screen.click(r"img\close.png")# 关闭评分框
     if type == 1:
         screen.click(r"img\delete.png")# 删除
         sleep(1)
