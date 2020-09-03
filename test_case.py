@@ -3,33 +3,33 @@ import RA, RS, DI, RL, ASQ
 import data
 
 
+class Test_Speaking(unittest.TestCase):
+    
+    def Test_Case_RA(self):
+        text = RA.Test_RA(data.chrome,data.Url,data.ra)
+        self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")  # 断言评分成功弹窗出现
 
-def Test_Case_RA(self):
-    text = RA.Test_RA(data.chrome,data.Url,data.ra)
-    self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")  # 断言评分成功弹窗出现
+    def Test_Case_RS(self):
+        text = RS.Test_RS(data.chrome,data.Url,data.rs)
+        self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
 
-def Test_Case_RS(self):
-    text = RS.Test_RS(data.chrome,data.Url,data.rs)
-    self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    def Test_Case_DI(self):
+        text = DI.Test_DI(data.chrome,data.Url,data.di)
+        self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
 
-def Test_Case_DI(self):
-    text = DI.Test_DI(data.chrome,data.Url,data.di)
-    self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    def Test_Case_RL(self):
+        text = RL.Test_RL(data.chrome,data.Url,data.rl)
+        self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
 
-def Test_Case_RL(self):
-    text = RL.Test_RL(data.chrome,data.Url,data.rl)
-    self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
-
-def Test_Case_ASQ(self):
-    text = ASQ.Test_ASQ(data.chrome,data.Url,data.asq)
-    self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    def Test_Case_ASQ(self):
+        text = ASQ.Test_ASQ(data.chrome,data.Url,data.asq)
+        self.asseertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
 
 
     
 
 if __name__ == "__main__":
-    pass
-unittest.main()
+    unittest.main()
 
 
 
