@@ -56,10 +56,17 @@ def single(driver):
     ele.click()
     return
 
+def double(driver):
+    ele=driver.find_element_by_css_selector(data.doubleAnswer1)
+    ele.click()
+    ele=driver.find_element_by_css_selector(data.doubleAnswer2)
+    ele.click()
+    return
+
 def score(driver,type):
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
-    if type == 1:
+    if type == 1 or type == 3 or type == 4:
         ele = driver.find_element_by_css_selector(data.submit)  # 提交
     elif type == 2:
         # ele = driver.find_element_by_xpath(data.submit)  # 提交

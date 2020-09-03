@@ -1,7 +1,7 @@
 from selenium import webdriver
 from jpype import *
 from time import sleep
-from methodApi import login,score,single,speak
+from methodApi import login,score,double,speak
 import data
 
 driver = webdriver.Chrome(data.chrome)
@@ -13,9 +13,9 @@ sleep(3)
 ele=driver.find_element_by_xpath('/html/body/div[2]/div/div[2]/div/div[2]/div/div/div[2]/button[2]')#选择语言
 ele.click()
 sleep(1)
-driver.get(data.single)#进入题目
+driver.get(data.double)#进入题目
 sleep(1)
-single(driver)
-score(driver,3)#选择并评分
+double(driver)
+score(driver,4)#选择并评分
 shutdownJVM()
 pass

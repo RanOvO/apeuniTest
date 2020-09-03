@@ -1,6 +1,6 @@
 #------------------------账户-----------------------------------
-email="919171742@qq.com"
-password="qmy19980809"
+email="919171713@qq.com"
+password="123456"
 deviluser="apeuni"
 devilpsw="apeSandbox"
 releaseuser="apeuni"
@@ -27,10 +27,13 @@ we='https://'+link+'.apeunisss.com/zh-CN/practice/essays/97'
 
 #------------------------阅读听力-------------------------------
 single='https://'+link+'.apeuni.com/zh-CN/practice/r_mcs/112'
+double='https://'+link+'.apeuni.com/zh-CN/practice/r_mcm/51'
 
 #------------------------按钮-----------------------------------
 submit='#root > div.Wrapper-sc-a6ptlt.iTCNIt > div.ant-spin-nested-loading > div > div.ant-row-flex.ant-row-flex-space-between > div:nth-child(1) > button:nth-child(1)'
 startR='//*[@id="root"]/div[2]/div[4]/div/div[6]/div[2]/div[3]/div/i'
 endR='//*[@id="root"]/div[2]/div[4]/div/div[6]/div[2]/div[3]/div/i'
 delete='/html/body/div[3]/div/div/div/div[2]/div/div/div[2]/button[2]'
-singleAnswer='#root > div.Wrapper-sc-a6ptlt.iTCNIt > div.ant-spin-nested-loading > div > div:nth-child(8) > div > label.SdRadio-sc-177nnay.dDFQYo.answer-missing.ant-radio-wrapper > span.ant-radio > input'
+singleAnswer='#root > div.Wrapper-sc-a6ptlt.iTCNIt > div.ant-spin-nested-loading > div > div:nth-child(8) > div > label:nth-child(2) > span.ant-radio > input'
+doubleAnswer1='#CHECKBOX_GROUP_ID > label:nth-child(2) > span.ant-checkbox > input'
+doubleAnswer2='#CHECKBOX_GROUP_ID > label:nth-child(3) > span.ant-checkbox > input'
