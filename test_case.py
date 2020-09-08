@@ -1,41 +1,38 @@
+
 import unittest
-import RA, RS, DI, RL, ASQ
+import RA
 import data
 from selenium import webdriver
-
+from methodApi import login
+from assertpy import assert_that
 
 class Test_Speaking(unittest.TestCase):
 
     def setUp(self):
-
-        driver = webdriver.Chrome(data.chrome)
-        driver.maximize_window()
-        driver.get(data.Url)
-        login(driver)
-        slepp(3)
+        pass
 
     def tearDown(self):
-        webdriver.Chrome.quit()
+        pass
 
-    def test_Case_RA(self):
-        text = RA.Test_RA(data.chrome, data.Url, data.ra)
-        self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    def test_case1_RA(self):
+        txt = RA.Test_RA(data.ra).text
+        print(f'{txt}')
+        self.assertEqual(f'{txt}',"点击彩色单词可查看解析")
+    # def test_case2_RS(self):
+    #     text = RS.Test_RS(data.chrome, data.rs)
+    #     self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
 
-    def test_Case_RS(self):
-        text = RS.Test_RS(data.chrome, data.Url, data.rs)
-        self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    # def test_case3_DI(self):
+    #     text = DI.Test_DI(data.chrome, data.di)
+    #     self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
 
-    def test_Case_DI(self):
-        text = DI.Test_DI(data.chrome, data.Url, data.di)
-        self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    # def test_case4_RL(self):
+    #     text = RL.Test_RL(data.chrome, data.rl)
+    #     self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
 
-    def test_Case_RL(self):
-        text = RL.Test_RL(data.chrome, data.Url, data.rl)
-        self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
-
-    def test_Case_ASQ(self):
-        text = ASQ.Test_ASQ(data.chrome, data.Url, data.asq)
-        self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    # def test_case5_ASQ(self):
+    #     text = ASQ.Test_ASQ(data.chrome, data.asq)
+    #     self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
 
 
 if __name__ == "__main__":

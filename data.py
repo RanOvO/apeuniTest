@@ -9,11 +9,11 @@ releasepsw="apeTeslaAdmin"
 chrome='F:\driver\chromedriver.exe'
 
 #------------------------url-----------------------------------
-link="release"
+link="devil"
 releaseUrlIn="https://release.apeuni.com/users/sign_in"
 releaseUrlUp="https://release.apeuni.com/users/sign_up"
 devilUrlIn="https://devil.apeuni.com/users/sign_in"
-Url=releaseUrlIn
+Url=devilUrlIn
 #------------------------口语-----------------------------------
 ra='https://'+link+'.apeuni.com/zh-CN/practice/read_alouds/207'
 rs='https://'+link+'.apeuni.com/zh-CN/practice/repeat_sentences/434'
