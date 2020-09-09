@@ -31,8 +31,9 @@ double='https://'+link+'.apeuni.com/zh-CN/practice/r_mcm/51'
 
 #------------------------按钮-----------------------------------
 submit='#root > div.Wrapper-sc-a6ptlt.iTCNIt > div.ant-spin-nested-loading > div > div.ant-row-flex.ant-row-flex-space-between > div:nth-child(1) > button:nth-child(1)'
-startR='//*[@id="root"]/div[2]/div[4]/div/div[6]/div[2]/div[3]/div/i'
-endR='//*[@id="root"]/div[2]/div[4]/div/div[6]/div[2]/div[3]/div/i'
+startR='#root > div.Wrapper-sc-a6ptlt.iTCNIt > div.ant-spin-nested-loading > div > div.SdRecorderContainer-sc-tb33to.dIugcv > div.body > div.button > div > i'
+endR='#root > div.Wrapper-sc-a6ptlt.iTCNIt > div.ant-spin-nested-loading > div > div.SdRecorderContainer-sc-tb33to.dIugcv > div.body > div.button > div > i'
+
 delete='/html/body/div[3]/div/div/div/div[2]/div/div/div[2]/button[2]'
 singleAnswer='#root > div.Wrapper-sc-a6ptlt.iTCNIt > div.ant-spin-nested-loading > div > div:nth-child(8) > div > label:nth-child(2) > span.ant-radio > input'
 doubleAnswer1='#CHECKBOX_GROUP_ID > label:nth-child(2) > span.ant-checkbox > input'

@@ -2,10 +2,7 @@ from jpype import *
 from time import sleep
 import data
 def login(driver):
-    print
-    getDefaultJVMPath()
-    startJVM(getDefaultJVMPath(), "-ea", r"-Djava.class.path=sikuli\sikulixapi.jar")
-    java.lang.System.out.println("hello world")
+
     Screen = JClass("org.sikuli.script.Screen")
     screen = Screen()
     screen.type(r"img\admin.png",data.deviluser)
@@ -27,10 +24,10 @@ def login(driver):
 
 def redio(driver):
     #DI://*[@id="root"]/div[2]/div[4]/div/div[5]/div[2]/div[3]/div/i
-    ele=driver.find_element_by_xpath(data.startR)# 开始录音
+    ele=driver.find_element_by_css_selector(data.startR)# 开始录音
     ele.click()
     sleep(10)
-    ele=driver.find_element_by_xpath(data.endR)# 结束录音
+    ele=driver.find_element_by_css_selector(data.endR)# 结束录音
     ele.click()
     sleep(1)
     return

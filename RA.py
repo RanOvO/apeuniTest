@@ -23,9 +23,9 @@ def Test_RA(Qtype):
     allow()  # 允许录音
     speak(driver,1,80)  # 自动录音&评分
     # score(driver,1)  # 手动点击录音&评分
-    shutdownJVM()
+
     sleep(20)
-    ele = driver.find_element(By.XPATH, '/html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/div/div[4]/div')
+    ele = driver.find_element(By.XPATH, '/html/body/div[3]/div/div[2]/div/div[2]/div[2]/div/div/div[3]/div[1]').text
+    driver.quit()
     return ele
 
-pass

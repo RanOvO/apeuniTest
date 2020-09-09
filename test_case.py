@@ -1,11 +1,15 @@
 
 import unittest
-import RA
+import RA, RS, DI, RL, ASQ
 import data
 from selenium import webdriver
 from methodApi import login
 from assertpy import assert_that
+from jpype import *
 
+getDefaultJVMPath()
+startJVM(getDefaultJVMPath(), "-ea", r"-Djava.class.path=sikuli\sikulixapi.jar")
+java.lang.System.out.println("hello world")
 class Test_Speaking(unittest.TestCase):
 
     def setUp(self):
@@ -15,28 +19,34 @@ class Test_Speaking(unittest.TestCase):
         pass
 
     def test_case1_RA(self):
-        txt = RA.Test_RA(data.ra).text
+        txt = RA.Test_RA(data.ra)
         print(f'{txt}')
-        self.assertEqual(f'{txt}',"点击彩色单词可查看解析")
-    # def test_case2_RS(self):
-    #     text = RS.Test_RS(data.chrome, data.rs)
-    #     self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+        self.assertEqual("AI 语音识别:", f'{txt}')
+
+    def test_case2_RS(self):
+        txt = RS.Test_RS(data.rs)
+        print(f'{txt}')
+        self.assertEqual("AI 语音识别:", f'{txt}')
 
     # def test_case3_DI(self):
-    #     text = DI.Test_DI(data.chrome, data.di)
-    #     self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    #     txt = DI.Test_DI(data.di)
+    #     print(f'{txt}')
+    #     self.assertEqual("AI 语音识别:", f'{txt}')
 
-    # def test_case4_RL(self):
-    #     text = RL.Test_RL(data.chrome, data.rl)
-    #     self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    def test_case4_RL(self):
+        txt = RL.Test_RL(data.rl)
+        print(f'{txt}')
+        self.assertEqual("AI 语音识别:", f'{txt}')
 
-    # def test_case5_ASQ(self):
-    #     text = ASQ.Test_ASQ(data.chrome, data.asq)
-    #     self.assertpy.assert_that(f'{text}').is_equal_to("点击彩色单词可查看解析")
+    def test_case5_ASQ(self):
+        txt = ASQ.Test_ASQ(data.asq)
+        print(f'{txt}')
+        self.assertEqual("AI 语音识别:", f'{txt}')
 
 
 if __name__ == "__main__":
     unittest.main()
+shutdownJVM()
 
 
 # (driver.find_element_by_xpath('/html/body/div[4]/div/div[2]/div/div[2]/div[3]/div/div[1]/button')).click()  # 关闭评分弹窗
